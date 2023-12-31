@@ -7,7 +7,12 @@ import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp().then((value) => Get.put(AuthController()));
+  try {
+    await Firebase.initializeApp();
+    Get.put(AuthController());
+  } catch (e) {
+    print('Firebase initialization error: $e');
+  }
   runApp(const MainApp());
 }
 
