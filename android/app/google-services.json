@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "313428823871",
+    "project_id": "nusantara-6f9a5",
+    "storage_bucket": "nusantara-6f9a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313428823871:android:9810822b62fdff5c71cd8a",
+        "android_client_info": {
+          "package_name": "com.example.nusantara_test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5O1Gv6KjJ6zzIsE1lfvHw8CN_WcSI9SA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
