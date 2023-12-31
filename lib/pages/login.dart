@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:nusantara_test/controller/auth_controller.dart';
 import 'package:nusantara_test/models/login_field.dart';
 import 'package:get/get.dart';
 
 class Login extends StatelessWidget {
   Login({super.key});
 
-  final usernameController = TextEditingController();
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -31,8 +32,8 @@ class Login extends StatelessWidget {
               height: 25,
             ),
             MyField(
-                controller: usernameController,
-                hintText: 'Username',
+                controller: emailController,
+                hintText: 'Email',
                 obsecure: false),
             const SizedBox(
               height: 15,
@@ -48,7 +49,10 @@ class Login extends StatelessWidget {
               width: 350,
               height: 55,
               child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    AuthController.instance
+                        .login(emailController.text, passwordController.text);
+                  },
                   child: Text(
                     'Login',
                     style: TextStyle(color: Colors.blue[800], fontSize: 18),

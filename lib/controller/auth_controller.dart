@@ -23,7 +23,9 @@ class AuthController extends GetxController {
       print("Login Page");
       Get.offAll(() => Login());
     } else {
-      Get.offAll(() => const Dashboard());
+      Get.offAll(() => Dashboard(
+            email: user.email.toString(),
+          ));
     }
   }
 
@@ -60,5 +62,9 @@ class AuthController extends GetxController {
             style: const TextStyle(color: Colors.white),
           ));
     }
+  }
+
+  void logout() async {
+    await auth.signOut();
   }
 }
